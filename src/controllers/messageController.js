@@ -2,9 +2,9 @@ import MessageService from '../services/message_service'
 import MessageRepository from '../repositories/message_repository'
 
 const findAll = async (req, res) => {
-  console.log("controller findAll endPoint reqBody: " + req)
+  // console.log("controller findAll endPoint reqBody: " + req)
   const messages = await MessageService.findAll();
-  console.log("this is message array from controller: " + messages)
+  // console.log("this is message array from controller: " + messages)
   res.json(messages);
 }
 
