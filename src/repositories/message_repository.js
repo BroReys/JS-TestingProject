@@ -2,6 +2,7 @@ import Message from "../models/message";
 
 const findAll = async () => {
   const messages = await Message.findAll();
+  console.log("messages Repo result: " + messages)
   return messages;
 }
 

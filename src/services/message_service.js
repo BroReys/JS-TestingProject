@@ -1,6 +1,8 @@
 import MessageRepository from '../repositories/message_repository'
 
-const findAll = MessageRepository.findAll();
+const findAll = async () => {
+  await MessageRepository.findAll();
+}
 
 const createMessage = async (message) => {
   return await MessageRepository.createMessage(message);

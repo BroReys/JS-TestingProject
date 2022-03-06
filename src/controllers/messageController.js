@@ -1,14 +1,15 @@
 import MessageService from '../services/message_service'
+import MessageRepository from '../repositories/message_repository'
 
 const findAll = async (req, res) => {
-  const messages = await MessageService.findAll;
-  console.log("this is message array: " + messages)
+  console.log("controller findAll endPoint reqBody: " + req)
+  const messages = await MessageRepository.findAll();
+  console.log("this is message array from controller: " + messages)
   res.json(messages);
 }
 
 const create = async (req, res) => {
   const message = await MessageService.createMessage(req.body);
-  console.log(message)
   res.json(message);
 }
 
