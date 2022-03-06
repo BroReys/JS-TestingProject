@@ -8,6 +8,8 @@ const findAll = async () => {
 
 const createMessage = async (message) => {
   await Message.create(message);
+  console.log("message creation Repo result: " + message);
+
 }
 
 const deleteMessage = async (message) => {
