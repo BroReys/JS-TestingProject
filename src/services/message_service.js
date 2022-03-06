@@ -19,8 +19,6 @@ const deleteMessage = async (message) => {
   await MessageRepository.deleteMessage(message);
 }
 
-// some chanes to test git shell
-
 export default {
   findAll,
   createMessage,
